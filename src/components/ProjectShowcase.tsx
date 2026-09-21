@@ -13,6 +13,8 @@ interface Project {
   githubUrl: string;
 }
 
+const base = import.meta.env.BASE_URL;
+
 const projects: Project[] = [
   {
     id: 'ai-finance',
@@ -20,7 +22,7 @@ const projects: Project[] = [
     date: 'Oct 2025 - Jan 2026',
     description:
       'Autonomous 3-way reconciliation engine pairing bank statements, gateway settlements, and invoices with sub-cent precision. Uses fuzzy heuristics and grounded LLMs to diagnose fee shortfalls, timing delays, and eliminate financial discrepancy leakage.',
-    image: '/assets/projects/ai_finance.jpg',
+    image: `${base}assets/projects/ai_finance.jpg`,
     imageAlt: 'Financial Accounting & Data Reconciliation System',
     technologies: ['FastAPI', 'Python', 'RapidFuzz', 'Pandas', 'React', 'LLMs'],
     githubUrl: 'https://github.com/yaswitha525/Ai-finance-controller',
@@ -31,7 +33,7 @@ const projects: Project[] = [
     date: 'Sep 2026',
     description:
       'Event-driven backend that highlights meaningful financial changes in watched equity assets since the user’s last snapshot. Features Redis caching, BullMQ async workers, stale snapshot detection, and live market data stream integration.',
-    image: '/assets/projects/smart_stock.jpg',
+    image: `${base}assets/projects/smart_stock.jpg`,
     imageAlt: 'Stock Market Trading & Candlestick Intelligence Dashboard',
     technologies: ['Node.js', 'Express', 'TypeScript', 'PostgreSQL', 'Redis', 'BullMQ', 'Docker'],
     githubUrl: 'https://github.com/yaswitha525/Smart-Stock-Watchlist',
@@ -42,7 +44,7 @@ const projects: Project[] = [
     date: '2025',
     description:
       'Autonomous multi-agent travel planner built with Google ADK and MCP. Coordinates specialized sub-agents for live flight monitoring, accommodation comparison, and curated itineraries with PII redaction and a human-in-the-loop approval gate.',
-    image: '/assets/projects/travelmate.jpg',
+    image: `${base}assets/projects/travelmate.jpg`,
     imageAlt: 'AI Travel Planning & Global Exploration Workspace',
     technologies: ['Google ADK', 'Python', 'AI Agents', 'MCP', 'LLMs', 'Streamlit'],
     githubUrl: 'https://github.com/yaswitha525/travel-mate',
@@ -53,7 +55,7 @@ const projects: Project[] = [
     date: '2025',
     description:
       'Full-stack on-demand service platform connecting customers with verified local service professionals. Features automated geo-dispatch under 10 seconds, dual customer/worker role portals, and a high-performance Prisma backend with JWT auth.',
-    image: '/assets/projects/quickhire.jpg',
+    image: `${base}assets/projects/quickhire.jpg`,
     imageAlt: 'Professional Home Services & Technician Dispatch',
     technologies: ['React', 'Node.js', 'Express', 'TypeScript', 'Prisma', 'PostgreSQL', 'JWT'],
     githubUrl: 'https://github.com/yaswitha525/quick_hire',
@@ -64,7 +66,7 @@ const projects: Project[] = [
     date: '2024 - 2025',
     description:
       'Computer vision pipeline detecting helmetless riding, triple riding, and vehicle license plates in real time from surveillance feeds. Combines fine-tuned YOLOv8 (75% mAP@50) with OpenCV thresholding and an automated PDF citation generator.',
-    image: '/assets/projects/traffic_violation.jpg',
+    image: `${base}assets/projects/traffic_violation.jpg`,
     imageAlt: 'City Traffic Surveillance & Vehicle Computer Vision',
     technologies: ['YOLOv8', 'OpenCV', 'Python', 'Computer Vision', 'Streamlit'],
     githubUrl: 'https://github.com/yaswitha525/Traffic_Violation_Detection_System_prototype',
@@ -75,7 +77,7 @@ const projects: Project[] = [
     date: 'Nov 2025 - Jan 2026',
     description:
       'Deep-learning text-to-audio composition system developed at Infosys Springboard. Uses MusicGen and Transformers to synthesize stylized instrumental music from natural-language prompts, featuring an interactive Streamlit waveform interface.',
-    image: '/assets/projects/ai_music.jpg',
+    image: `${base}assets/projects/ai_music.jpg`,
     imageAlt: 'Digital Music Production Studio & Sound Synthesis',
     technologies: ['Python', 'MusicGen', 'Transformers', 'Deep Learning', 'Streamlit'],
     githubUrl: 'https://github.com/yaswitha525/ai_music_composition',

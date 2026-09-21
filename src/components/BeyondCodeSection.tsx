@@ -17,6 +17,8 @@ interface Hobby {
   };
 }
 
+const base = import.meta.env.BASE_URL;
+
 const hobbies: Hobby[] = [
   {
     number: '01',
@@ -24,7 +26,7 @@ const hobbies: Hobby[] = [
     tag: 'Knowledge & Curiosity',
     icon: Headphones,
     secondaryIcon: BookOpen,
-    image: '/assets/hobbies/hobby_podcasts.jpg',
+    image: `${base}assets/hobbies/hobby_podcasts.jpg`,
     imageAlt: 'Desk setup with wireless headphones, warm coffee, and notebook for podcast learning',
     accent: {
       badge: 'bg-amber-400/15 text-amber-300 border-amber-400/30',
@@ -39,7 +41,7 @@ const hobbies: Hobby[] = [
     tag: 'Culinary Creativity',
     icon: ChefHat,
     secondaryIcon: Utensils,
-    image: '/assets/hobbies/hobby_cooking.jpg',
+    image: `${base}assets/hobbies/hobby_cooking.jpg`,
     imageAlt: 'Gourmet cooking with fresh herbs, pan on stove, and culinary ingredients',
     accent: {
       badge: 'bg-rose-400/15 text-rose-300 border-rose-400/30',
@@ -54,7 +56,7 @@ const hobbies: Hobby[] = [
     tag: 'Adventure & Wanderlust',
     icon: Compass,
     secondaryIcon: MapPin,
-    image: '/assets/hobbies/hobby_travel.jpg',
+    image: `${base}assets/hobbies/hobby_travel.jpg`,
     imageAlt: 'Scenic alpine mountain overlook during golden hour with backpack and camera',
     accent: {
       badge: 'bg-cyan-400/15 text-cyan-300 border-cyan-400/30',
