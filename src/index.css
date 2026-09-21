@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-display: 'Instrument Serif', 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --color-sky-top: #475be8;
+  --color-sky-mid: #936ae6;
+  --color-sky-bottom: #f897b2;
+  --color-accent-yellow: #FED049;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+}
+
+/* Custom dreamy animated gradient for the hero */
+.hero-gradient {
+  background: linear-gradient(
+    180deg,
+    #4a54e1 0%,
+    #5c5ae4 18%,
+    #7a5fe8 38%,
+    #986ae9 58%,
+    #b976dc 76%,
+    #e585be 88%,
+    #f89cb5 100%
+  );
+  background-size: 100% 120%;
+  animation: gradientSubtleFlow 16s ease-in-out infinite alternate;
+}
+
+@keyframes gradientSubtleFlow {
+  0% {
+    background-position: 50% 0%;
+  }
+  100% {
+    background-position: 50% 30%;
+  }
+}
+
+/* Side navigation gradient matching screenshot 2 */
+.sidebar-gradient {
+  background: linear-gradient(
+    180deg,
+    #535de4 0%,
+    #7e61e7 40%,
+    #a86ee0 70%,
+    #e284c1 95%,
+    #f89db6 100%
+  );
+}
+
+/* Glass & Card effects */
+.glass-pill {
+  background: rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+}
+
+.glass-pill:hover {
+  background: rgba(255, 255, 255, 0.28);
+  border-color: rgba(255, 255, 255, 0.45);
+}
+
+/* Subtle float animations */
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1.5deg);
+  }
+}
+
+.animate-float-gentle {
+  animation: floatGentle 5s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.08);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
